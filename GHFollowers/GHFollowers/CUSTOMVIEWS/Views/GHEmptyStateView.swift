@@ -23,10 +23,9 @@ class GHEmptyStateView: UIView {
     }
     
     
-    init(message: String) {
-        super.init(frame: .zero)
+    convenience init(message: String) {
+        self.init(frame: .zero)
         messageLabel.text = message
-        configure()
     }
     
     

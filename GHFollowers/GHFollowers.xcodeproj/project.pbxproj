@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5DBC622A9109D500BD51ED /* GH-ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DBC612A9109D500BD51ED /* GH-ViewController.swift */; };
 		2A7BEA592A600262000891A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BEA582A600262000891A6 /* AppDelegate.swift */; };
 		2A7BEA5B2A600262000891A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BEA5A2A600262000891A6 /* SceneDelegate.swift */; };
 		2A7BEA622A600267000891A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BEA612A600267000891A6 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A5DBC612A9109D500BD51ED /* GH-ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GH-ViewController.swift"; sourceTree = "<group>"; };
 		2A7BEA552A600262000891A6 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7BEA582A600262000891A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7BEA5A2A600262000891A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5DBC5E2A9108D800BD51ED /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				2A5DBC612A9109D500BD51ED /* GH-ViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		2A7BEA4C2A600261000891A6 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		2A7BEA712A6052BD000891A6 /* CUSTOMVIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				2A5DBC5E2A9108D800BD51ED /* TabBarController */,
 				2A7BEB0B2A7D13EA000891A6 /* ItemInfoVc */,
 				2A7BEA9A2A6E9F75000891A6 /* Views */,
 				2A7BEA992A6E9F5C000891A6 /* ViewControllers */,
@@ -327,6 +338,7 @@
 				2A7BEA882A627F56000891A6 /* User.swift in Sources */,
 				2A7BEB022A7BBD35000891A6 /* GH-SecondaryLabel.swift in Sources */,
 				2A7BEA7B2A617677000891A6 /* GH-BodyLabel.swift in Sources */,
+				2A5DBC622A9109D500BD51ED /* GH-ViewController.swift in Sources */,
 				2A7BEA7F2A6177AD000891A6 /* GH-AlertVC.swift in Sources */,
 				2A7BEB0D2A7D1424000891A6 /* GHFollowerItemVC.swift in Sources */,
 				2A7BEA752A605326000891A6 /* GH-Button.swift in Sources */,

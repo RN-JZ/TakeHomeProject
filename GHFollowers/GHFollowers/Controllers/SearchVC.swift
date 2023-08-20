@@ -4,6 +4,7 @@ import SwiftUI
 
 class SearchVC: UIViewController {
     
+    
     let logoImageView:UIImageView =
     {
         let Image = UIImageView()
@@ -22,11 +23,14 @@ class SearchVC: UIViewController {
         layout()
         KeyboardDismiss()
         
+      
+        
        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        print(userNameTextField.isFirstResponder)
     }
     
     // MARK: - ACTION
@@ -63,6 +67,7 @@ extension SearchVC
         view.addSubview(userNameTextField)
         view.addSubview(callToActionButton)
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        keyboardHiding()
         
     }
     func layout()
@@ -94,6 +99,13 @@ extension SearchVC
            
         ])
     }
+    
+    private func keyboardHiding()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillNotShow), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
 }
 
 
@@ -106,6 +118,17 @@ extension SearchVC:UITextFieldDelegate
         pushFollowerListVC()
         return true
     }
+    
+    @objc func keyboardWillShow()
+    {
+        view.frame.origin.y = view.frame.origin.y - 50
+    }
+    
+    @objc func keyboardWillNotShow()
+    {
+        view.frame.origin.y = 0
+    }
+    
 }
 
 
